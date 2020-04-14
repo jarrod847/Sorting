@@ -3,7 +3,10 @@ import math
 import random
 arr = list(range(1, 11))
 random.shuffle(arr)
-print(f'before iterative sort', arr)
+bub = list(range(1, 11))
+random.shuffle(bub)
+
+print(f'before sort', arr)
 
 
 def selection_sort(arr):
@@ -24,16 +27,27 @@ def selection_sort(arr):
     return arr
 
 
-print(f'after sort', selection_sort(arr))
+print(f'selection sort', selection_sort(arr))
 # TO-DO:  implement the Bubble Sort function below
+print(f'before bubble arr', bub)
 
 
 def bubble_sort(arr):
+    for i in range(0, len(arr)-1):
+        for j in range(0, len(arr) - 1):
+            print(arr)
+            if (arr[j] > arr[j+1]):
+                x = arr[j]
+                arr[j] = arr[j + 1]
+                arr[j+1] = x
 
     return arr
 
 
+print(f'bubble sort', bubble_sort(bub))
 # STRETCH: implement the Count Sort function below
+
+
 def count_sort(arr, maximum=-1):
 
     return arr
